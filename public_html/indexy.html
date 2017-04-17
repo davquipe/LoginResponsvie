@@ -1,0 +1,55 @@
+<form name='formulario-js' onsubmit='return validar()'>
+<ul>
+<label for='nombre'>Nombre*</label>
+<imput type='text' id='nombre' name='nombre' />
+</li>
+<li>
+<label for='direccion'>Dirección*</label>
+<imput type='text' id='direccion' name='direccion'/>
+</li>
+<li>
+<label for='edad'>Edad</label>
+<imput type='text' id='edad' name='edad' />
+</li>
+<li>
+<label for='email'>E-mail</label>
+<imput type='text' id='email' name='email' />
+</li>
+<li>
+<label for='estudios'>Estudios</label>
+<select id='estudios' name='estudios'>
+<option value=''>Seleccione</option>
+<option>Ningunos</option>
+<option>Primarios</option>
+<option>Bachiller</option>
+<option>Grado</option>
+<option>Master</option>
+</select>
+</li>
+<li>
+<label>
+<input type='checkbox' value='SI' id='acepto'/>
+He leído y acepto las condiciones;
+</label>
+</li>
+</ul>
+<button>Dar de alta</button>
+</form>
+
+A continuación con CSS se proporciona estilo al formulario:
+<style>
+form{
+        width:295px;
+    }
+    
+    ul{
+        list-style:none;
+    }
+    
+    label{
+        width:200px;
+        display:block;
+        margin:10px;
+        float:left;
+    }
+</style>
