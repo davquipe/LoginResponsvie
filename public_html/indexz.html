@@ -9,39 +9,10 @@ and open the template in the editor.
         <title>Registro</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/main.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="css/style_1.css">
 <!--fdf-->
-<style>
-    div {
-      margin: 0 0 1.2em 0;
-    
-    fieldset {
-      border: 1px solid #ccc;
-      margin: 0 0 1em;
-      padding: 1.5em 1.5em 1.0em 1.5em;  
-      
-    }
-    input {
-      border: 1px solid #ccc;
-      color: #666;
-      font-size: 1em;
-      padding: 0.2em;
-      width: calc(100% - 3.8em);
-    }
-    label {
-      color: #444;
-      display: inline-block;
-      width: 6.2em;
-    }
-    legend {
-      color: #444;
-      font-weight: 400;
-      padding: 0 0.5em 0 0.5em;
-    }
-    p#data {
-      height: 9em;
-    }
-  </style>
+
         <script type="text/javascript">
              window.onload = function(e) {
                buscarPersona("");
@@ -49,11 +20,13 @@ and open the template in the editor.
             
         </script>      
     </head>
+    <body bgcolor="#CCFFFF">
+   <font color="">
     <body>
         
   <div id="container">
 
-    <h1><font><font> Formulario de Registro de Personas ;)</font></font></h1>
+    <h1><font><font> Formulario de Registro de Personas</font></font></h1>
 
     
       
@@ -70,15 +43,17 @@ and open the template in the editor.
         <label for="fn"><font><font>Fecha de Nacimineto: </font></font></label><input id="fn" type="date" value="">
       </div>
       <div>
-        <label for="genero"><font><font>genero: </font></font></label><input id="genero" type="text" value="">
+        <label for="genero"><font><font>genero: </font></font></label>
+        masculino<input id="genero "type="radio" name="genero" value="masculino" />
+        femenino<input id="genero" type="radio" name="genero" value="femenino" />
       </div>
       <div>
          <label for='profesion'>Profesion: </label>
             <select id='profesion' name='profesion'>
             <option value=''>Seleccione</option>
             <option>Ningunos</option>
-            <option>Primarios</option>
             <option>Bachiller</option>
+            <option>Doctorado</option>
             <option>Grado</option>
             <option>Master</option>
             </select>
@@ -108,7 +83,7 @@ and open the template in the editor.
       </div>
 
     <center>
-        <table id="TableData" border="1" style="width: 100%">
+        <table id="TableData" border="1" style="width: 150%">
             <thead style="background-color: buttonhighlight">
         <th>#</th>
         <th>Nombre</th>

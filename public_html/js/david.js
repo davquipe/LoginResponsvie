@@ -42,7 +42,7 @@ var telefono = document.getElementById('telefono');
 var idPersona = document.getElementById('idPersona');
 storeButton.addEventListener('click', function() {
   agregarPersona(nombre.value, apellido.value, dni.value, fn.value, genero.value, profesion.value, telefono.value);
-})
+});
 
 var dataElement = document.getElementById('data');
 function log(message) {
@@ -63,7 +63,7 @@ function buscarPersona(text) {
       
       for (var i = 0; i !== numRows; ++i) {
         var rows= results.rows.item(i);
-        resulTRows+='<tr><td>' + rows.idPersona + '</td>'+'<td>' + rows.nombre + '</td>'+'<td>' + rows.apellido + '</td>'+'<td>'+ rows.dni + '</td>'+'<td>'+ rows.fn + '</td>'+'<td>'+ rows.genero + '</td>'+'<td>'+ rows.profesion + '</td>'+'<td>' + rows.telefono + '</td>'+'<td style="text-align: center"><a href="#" onclick="eliminarPersona('+rows.idPersona+')">X</a> <a href="#" onclick="editarPersona('+rows.idPersona+')">E</a> </td></tr>';        
+        resulTRows+='<tr><td>' + rows.idPersona + '</td>'+'<td>' + rows.nombre + '</td>'+'<td>' + rows.apellido + '</td>'+'<td>'+ rows.dni + '</td>'+'<td>'+ rows.fn + '</td>'+'<td>'+ rows.genero + '</td>'+'<td>'+ rows.profesion + '</td>'+'<td>' + rows.telefono + '</td>'+'<td style="text-align: center"><a href="#" onclick="eliminarPersona('+rows.idPersona+')">Delete</a>-<a href="#" onclick="editarPersona('+rows.idPersona+')">Edit</a> </td></tr>';        
       }
       log(resulTRows);
     }, handleError);
@@ -79,6 +79,16 @@ function eliminarPersona(id){
     tx.executeSql("DELETE FROM persona WHERE idPersona=?", [id], handleError, null);
   }, handleError, function() {        
     buscarPersona("");
+    
+    {
+   
+   if (eliminarPersona().test(eliminarPersona())){
+   alert ('esta seguro');
+   } else {
+   alert ('Error');
+   }   
+   }
+    
   });    
 }
 
